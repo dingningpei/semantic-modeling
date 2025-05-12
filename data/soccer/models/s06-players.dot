@@ -1,0 +1,26 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"displayName"[shape="plaintext",style="filled",fillcolor="gold",label="displayName"];
+"firstName"[shape="plaintext",style="filled",fillcolor="gold",label="firstName"];
+"lastName"[shape="plaintext",style="filled",fillcolor="gold",label="lastName"];
+"fullName"[shape="plaintext",style="filled",fillcolor="gold",label="fullName"];
+"shortName"[shape="plaintext",style="filled",fillcolor="gold",label="shortName"];
+"schema:League1"[style="filled",color="white",fillcolor="lightgray",label="schema:League1"];
+"leagueName"[shape="plaintext",style="filled",fillcolor="gold",label="leagueName"];
+"leagueShortname"[shape="plaintext",style="filled",fillcolor="gold",label="leagueShortname"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+}
+"schema:Player1" -> "displayName"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "firstName"[color="brown",fontcolor="black",label="schema:givenName"];
+"schema:Player1" -> "lastName"[color="brown",fontcolor="black",label="schema:familyName"];
+"schema:Player1" -> "fullName"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "shortName"[color="brown",fontcolor="black",label="schema:alternateName"];
+"schema:League1" -> "leagueName"[color="brown",fontcolor="black",label="schema:name"];
+"schema:League1" -> "leagueShortname"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+"schema:SportsClub1" -> "schema:League1"[color="brown",fontcolor="black",label="schema:inLeague"];
+}

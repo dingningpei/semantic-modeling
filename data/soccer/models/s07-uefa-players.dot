@@ -1,0 +1,38 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"fn"[shape="plaintext",style="filled",fillcolor="gold",label="fn"];
+"ln"[shape="plaintext",style="filled",fillcolor="gold",label="ln"];
+"schema:League1"[style="filled",color="white",fillcolor="lightgray",label="schema:League1"];
+"cn"[shape="plaintext",style="filled",fillcolor="gold",label="cn"];
+"ag"[shape="plaintext",style="filled",fillcolor="gold",label="ag"];
+"sn"[shape="plaintext",style="filled",fillcolor="gold",label="sn"];
+"ht"[shape="plaintext",style="filled",fillcolor="gold",label="ht"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"cb"[shape="plaintext",style="filled",fillcolor="gold",label="cb"];
+"ps"[shape="plaintext",style="filled",fillcolor="gold",label="ps"];
+"no"[shape="plaintext",style="filled",fillcolor="gold",label="no"];
+"db"[shape="plaintext",style="filled",fillcolor="gold",label="db"];
+"go/at"[shape="plaintext",style="filled",fillcolor="gold",label="go/at"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"nt"[shape="plaintext",style="filled",fillcolor="gold",label="nt"];
+}
+"schema:Player1" -> "fn"[color="brown",fontcolor="black",label="schema:givenName"];
+"schema:Player1" -> "ln"[color="brown",fontcolor="black",label="schema:familyName"];
+"schema:League1" -> "cn"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "ag"[color="brown",fontcolor="black",label="schema:age"];
+"schema:Player1" -> "sn"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "ht"[color="brown",fontcolor="black",label="schema:height"];
+"schema:SportsClub1" -> "cb"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "ps"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "no"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "db"[color="brown",fontcolor="black",label="schema:birthDate"];
+"schema:Player1" -> "go/at"[color="brown",fontcolor="black",label="schema:goalScored"];
+"schema:SportsTeam1" -> "nt"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+"schema:SportsClub1" -> "schema:League1"[color="brown",fontcolor="black",label="schema:inLeague"];
+}

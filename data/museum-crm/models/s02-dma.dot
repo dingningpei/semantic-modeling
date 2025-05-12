@@ -1,0 +1,62 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"objectTitle"[shape="plaintext",style="filled",fillcolor="gold",label="objectTitle"];
+"crm:E55_Type1"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type1"];
+"objectWorkType"[shape="plaintext",style="filled",fillcolor="gold",label="objectWorkType"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artistName"];
+"crm:E74_Group1"[style="filled",color="white",fillcolor="lightgray",label="crm:E74_Group1"];
+"artistNationality"[shape="plaintext",style="filled",fillcolor="gold",label="artistNationality"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"artistBirthDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistBirthDate"];
+"crm:E52_Time-Span2"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span2"];
+"artistDeathDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistDeathDate"];
+"crm:E52_Time-Span3"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span3"];
+"objectEarliestDate"[shape="plaintext",style="filled",fillcolor="gold",label="objectEarliestDate"];
+"objectLatestDate"[shape="plaintext",style="filled",fillcolor="gold",label="objectLatestDate"];
+"crm:E30_Right1"[style="filled",color="white",fillcolor="lightgray",label="crm:E30_Right1"];
+"objectRights"[shape="plaintext",style="filled",fillcolor="gold",label="objectRights"];
+"crm:E55_Type2"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type2"];
+"objectFacetValue"[shape="plaintext",style="filled",fillcolor="gold",label="objectFacetValue"];
+"crm:E40_Legal_Body1"[style="filled",color="white",fillcolor="lightgray",label="crm:E40_Legal_Body1"];
+"objectLinkSource"[shape="plaintext",style="filled",fillcolor="gold",label="objectLinkSource"];
+"crm:E54_Dimension1"[style="filled",color="white",fillcolor="lightgray",label="crm:E54_Dimension1"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+"crm:E67_Birth1"[style="filled",color="white",fillcolor="lightgray",label="crm:E67_Birth1"];
+"crm:E69_Death1"[style="filled",color="white",fillcolor="lightgray",label="crm:E69_Death1"];
+}
+"crm:E35_Title1" -> "objectTitle"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E55_Type1" -> "objectWorkType"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E82_Actor_Appellation1" -> "artistName"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E74_Group1" -> "artistNationality"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span1" -> "artistBirthDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E52_Time-Span2" -> "artistDeathDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E52_Time-Span3" -> "objectEarliestDate"[color="brown",fontcolor="black",label="crm:P82a_begin_of_the_begin"];
+"crm:E52_Time-Span3" -> "objectLatestDate"[color="brown",fontcolor="black",label="crm:P82b_end_of_the_end"];
+"crm:E30_Right1" -> "objectRights"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E55_Type2" -> "objectFacetValue"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E40_Legal_Body1" -> "objectLinkSource"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E54_Dimension1" -> "dimensions"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E22_Man-Made_Object1" -> "crm:E30_Right1"[color="brown",fontcolor="black",label="crm:P104_is_subject_to"];
+"crm:E22_Man-Made_Object1" -> "crm:E55_Type1"[color="brown",fontcolor="black",label="crm:P2_has_type"];
+"crm:E22_Man-Made_Object1" -> "crm:E54_Dimension1"[color="brown",fontcolor="black",label="crm:P43_has_dimension"];
+"crm:E22_Man-Made_Object1" -> "crm:E40_Legal_Body1"[color="brown",fontcolor="black",label="crm:P51_has_former_or_current_owner"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E12_Production1" -> "crm:E55_Type2"[color="brown",fontcolor="black",label="crm:P32_used_general_technique"];
+"crm:E12_Production1" -> "crm:E52_Time-Span3"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E21_Person1" -> "crm:E67_Birth1"[color="brown",fontcolor="black",label="crm:P98i_was_born"];
+"crm:E21_Person1" -> "crm:E69_Death1"[color="brown",fontcolor="black",label="crm:P100i_died_in"];
+"crm:E21_Person1" -> "crm:E74_Group1"[color="brown",fontcolor="black",label="crm:P107i_is_current_or_former_member_of"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+"crm:E67_Birth1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E69_Death1" -> "crm:E52_Time-Span2"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+}

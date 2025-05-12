@@ -1,0 +1,54 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E38_Image1"[style="filled",color="white",fillcolor="lightgray",label="crm:E38_Image1"];
+"image"[shape="plaintext",style="filled",fillcolor="gold",label="image"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"date"[shape="plaintext",style="filled",fillcolor="gold",label="date"];
+"crm:E44_Place_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E44_Place_Appellation1"];
+"geography"[shape="plaintext",style="filled",fillcolor="gold",label="geography"];
+"crm:E55_Type2"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type2"];
+"culture"[shape="plaintext",style="filled",fillcolor="gold",label="culture"];
+"crm:E55_Type3"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type3"];
+"medium"[shape="plaintext",style="filled",fillcolor="gold",label="medium"];
+"crm:E54_Dimension1"[style="filled",color="white",fillcolor="lightgray",label="crm:E54_Dimension1"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+"crm:E55_Type1"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type1"];
+"classification"[shape="plaintext",style="filled",fillcolor="gold",label="classification"];
+"crm:E8_Acquisition1"[style="filled",color="white",fillcolor="lightgray",label="crm:E8_Acquisition1"];
+"creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="creditLine"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"who"[shape="plaintext",style="filled",fillcolor="gold",label="who"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"provenance"[shape="plaintext",style="filled",fillcolor="gold",label="provenance"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+"crm:E53_Place1"[style="filled",color="white",fillcolor="lightgray",label="crm:E53_Place1"];
+}
+"crm:E38_Image1" -> "image"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E52_Time-Span1" -> "date"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E44_Place_Appellation1" -> "geography"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E55_Type2" -> "culture"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E55_Type3" -> "medium"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E54_Dimension1" -> "dimensions"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E55_Type1" -> "classification"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E8_Acquisition1" -> "creditLine"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E82_Actor_Appellation1" -> "who"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E22_Man-Made_Object1" -> "description"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E8_Acquisition1" -> "provenance"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E38_Image1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P138_represents"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E55_Type1"[color="brown",fontcolor="black",label="crm:P2_has_tye"];
+"crm:E22_Man-Made_Object1" -> "crm:E55_Type2"[color="brown",fontcolor="black",label="crm:P2_has_tye"];
+"crm:E22_Man-Made_Object1" -> "crm:E8_Acquisition1"[color="brown",fontcolor="black",label="crm:P24i_changed_ownership_through"];
+"crm:E22_Man-Made_Object1" -> "crm:E54_Dimension1"[color="brown",fontcolor="black",label="crm:P43_has_dimension"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E12_Production1" -> "crm:E55_Type3"[color="brown",fontcolor="black",label="crm:P32_used_general_technique"];
+"crm:E12_Production1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E12_Production1" -> "crm:E53_Place1"[color="brown",fontcolor="black",label="crm:P7_took_place_at"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+"crm:E53_Place1" -> "crm:E44_Place_Appellation1"[color="brown",fontcolor="black",label="crm:P1_is_identified_by"];
+}

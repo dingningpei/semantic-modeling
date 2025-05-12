@@ -1,0 +1,30 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"IsCaptain"[shape="plaintext",style="filled",fillcolor="gold",label="IsCaptain"];
+"schema:League1"[style="filled",color="white",fillcolor="lightgray",label="schema:League1"];
+"ClubCountry"[shape="plaintext",style="filled",fillcolor="gold",label="ClubCountry"];
+"DateOfBirth"[shape="plaintext",style="filled",fillcolor="gold",label="DateOfBirth"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"Team"[shape="plaintext",style="filled",fillcolor="gold",label="Team"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"Club"[shape="plaintext",style="filled",fillcolor="gold",label="Club"];
+"FullName"[shape="plaintext",style="filled",fillcolor="gold",label="FullName"];
+"Position"[shape="plaintext",style="filled",fillcolor="gold",label="Position"];
+"Number"[shape="plaintext",style="filled",fillcolor="gold",label="Number"];
+}
+"schema:Player1" -> "IsCaptain"[color="brown",fontcolor="black",label="schema:isCaptain"];
+"schema:League1" -> "ClubCountry"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "DateOfBirth"[color="brown",fontcolor="black",label="schema:birthDate"];
+"schema:SportsTeam1" -> "Team"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsClub1" -> "Club"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "FullName"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "Position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "Number"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+"schema:SportsClub1" -> "schema:League1"[color="brown",fontcolor="black",label="schema:inLeague"];
+}

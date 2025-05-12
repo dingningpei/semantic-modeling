@@ -1,0 +1,36 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"Position"[shape="plaintext",style="filled",fillcolor="gold",label="Position"];
+"Player"[shape="plaintext",style="filled",fillcolor="gold",label="Player"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"Country"[shape="plaintext",style="filled",fillcolor="gold",label="Country"];
+"Height"[shape="plaintext",style="filled",fillcolor="gold",label="Height"];
+"Age"[shape="plaintext",style="filled",fillcolor="gold",label="Age"];
+"D.O.B"[shape="plaintext",style="filled",fillcolor="gold",label="D.O.B"];
+"Caps"[shape="plaintext",style="filled",fillcolor="gold",label="Caps"];
+"International goals"[shape="plaintext",style="filled",fillcolor="gold",label="International goals"];
+"schema:League1"[style="filled",color="white",fillcolor="lightgray",label="schema:League1"];
+"Club (country)"[shape="plaintext",style="filled",fillcolor="gold",label="Club (country)"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"Club"[shape="plaintext",style="filled",fillcolor="gold",label="Club"];
+"Number"[shape="plaintext",style="filled",fillcolor="gold",label="Number"];
+}
+"schema:Player1" -> "Position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "Player"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsTeam1" -> "Country"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "Height"[color="brown",fontcolor="black",label="schema:height"];
+"schema:Player1" -> "Age"[color="brown",fontcolor="black",label="schema:age"];
+"schema:Player1" -> "D.O.B"[color="brown",fontcolor="black",label="schema:birthDate"];
+"schema:Player1" -> "Caps"[color="brown",fontcolor="black",label="schema:numberOfPlayedGames"];
+"schema:Player1" -> "International goals"[color="brown",fontcolor="black",label="schema:goalScored"];
+"schema:League1" -> "Club (country)"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsClub1" -> "Club"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "Number"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+"schema:SportsClub1" -> "schema:League1"[color="brown",fontcolor="black",label="schema:inLeague"];
+}

@@ -1,0 +1,34 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"No."[shape="plaintext",style="filled",fillcolor="gold",label="No."];
+"Joueur"[shape="plaintext",style="filled",fillcolor="gold",label="Joueur"];
+"Position"[shape="plaintext",style="filled",fillcolor="gold",label="Position"];
+"Date de naissance"[shape="plaintext",style="filled",fillcolor="gold",label="Date de naissance"];
+"Age"[shape="plaintext",style="filled",fillcolor="gold",label="Age"];
+"Selections"[shape="plaintext",style="filled",fillcolor="gold",label="Selections"];
+"schema:League1"[style="filled",color="white",fillcolor="lightgray",label="schema:League1"];
+"Championnat"[shape="plaintext",style="filled",fillcolor="gold",label="Championnat"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"Club"[shape="plaintext",style="filled",fillcolor="gold",label="Club"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"Equipe"[shape="plaintext",style="filled",fillcolor="gold",label="Equipe"];
+"Classement FIFA"[shape="plaintext",style="filled",fillcolor="gold",label="Classement FIFA"];
+}
+"schema:Player1" -> "No."[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "Joueur"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "Position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "Date de naissance"[color="brown",fontcolor="black",label="schema:birthDate"];
+"schema:Player1" -> "Age"[color="brown",fontcolor="black",label="schema:age"];
+"schema:Player1" -> "Selections"[color="brown",fontcolor="black",label="schema:numberOfPlayedGames"];
+"schema:League1" -> "Championnat"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsClub1" -> "Club"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsTeam1" -> "Equipe"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsTeam1" -> "Classement FIFA"[color="brown",fontcolor="black",label="schema:ranking"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+"schema:SportsClub1" -> "schema:League1"[color="brown",fontcolor="black",label="schema:inLeague"];
+}

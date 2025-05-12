@@ -1,0 +1,36 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"objectID"[shape="plaintext",style="filled",fillcolor="gold",label="objectID"];
+"objectTitle"[shape="plaintext",style="filled",fillcolor="gold",label="objectTitle"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"objectWorkType"[shape="plaintext",style="filled",fillcolor="gold",label="objectWorkType"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artistName"];
+"artistBirthDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistBirthDate"];
+"artistDeathDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistDeathDate"];
+"artistNationality"[shape="plaintext",style="filled",fillcolor="gold",label="artistNationality"];
+"objectEarliestDate"[shape="plaintext",style="filled",fillcolor="gold",label="objectEarliestDate"];
+"objectRights"[shape="plaintext",style="filled",fillcolor="gold",label="objectRights"];
+"objectFacetValue"[shape="plaintext",style="filled",fillcolor="gold",label="objectFacetValue"];
+"objectLinkSource"[shape="plaintext",style="filled",fillcolor="gold",label="objectLinkSource"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+}
+"aac-ont:CulturalHeritageObject1" -> "objectID"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:CulturalHeritageObject1" -> "objectTitle"[color="brown",fontcolor="black",label="dcterms:title"];
+"skos:Concept1" -> "objectWorkType"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:Person1" -> "artistName"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "artistBirthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "artistDeathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Person1" -> "artistNationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:CulturalHeritageObject1" -> "objectEarliestDate"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "objectRights"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "objectFacetValue"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "objectLinkSource"[color="brown",fontcolor="black",label="dcterms:rightsHolder"];
+"aac-ont:CulturalHeritageObject1" -> "dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="edm:hasType"];
+}

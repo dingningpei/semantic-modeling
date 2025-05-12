@@ -1,0 +1,50 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"id"[shape="plaintext",style="filled",fillcolor="gold",label="id"];
+"edm:WebResource1"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource1"];
+"image"[shape="plaintext",style="filled",fillcolor="gold",label="image"];
+"aac-ont:CulturalHeritageObject2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject2"];
+"relatedArtworks"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtworks"];
+"date"[shape="plaintext",style="filled",fillcolor="gold",label="date"];
+"aac-ont:Place1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place1"];
+"geography"[shape="plaintext",style="filled",fillcolor="gold",label="geography"];
+"medium"[shape="plaintext",style="filled",fillcolor="gold",label="medium"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+"skos:Concept2"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept2"];
+"classification"[shape="plaintext",style="filled",fillcolor="gold",label="classification"];
+"creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="creditLine"];
+"accessionNumber"[shape="plaintext",style="filled",fillcolor="gold",label="accessionNumber"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"who"[shape="plaintext",style="filled",fillcolor="gold",label="who"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"what"[shape="plaintext",style="filled",fillcolor="gold",label="what"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"provenance"[shape="plaintext",style="filled",fillcolor="gold",label="provenance"];
+"edm:EuropeanaAggregation1"[style="filled",color="white",fillcolor="lightgray",label="edm:EuropeanaAggregation1"];
+}
+"aac-ont:CulturalHeritageObject1" -> "id"[color="brown",fontcolor="black",label="aac-ont:objectId"];
+"edm:WebResource1" -> "image"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtworks"[color="brown",fontcolor="black",label="aac-ont:objectId"];
+"aac-ont:CulturalHeritageObject1" -> "date"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:Place1" -> "geography"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:CulturalHeritageObject1" -> "medium"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"skos:Concept2" -> "classification"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "creditLine"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "accessionNumber"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:Person1" -> "who"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"skos:Concept1" -> "what"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "description"[color="brown",fontcolor="black",label="dcterms:description"];
+"aac-ont:CulturalHeritageObject1" -> "provenance"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"edm:EuropeanaAggregation1" -> "aac-ont:CulturalHeritageObject1"[color="brown",fontcolor="black",label="edm:aggregatedCHO"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource1"[color="brown",fontcolor="black",label="edm:hasView"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Place1"[color="brown",fontcolor="black",label="aac-ont:associatedPlace"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="dcterms:subject"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:CulturalHeritageObject2"[color="brown",fontcolor="black",label="edm:isRelatedTo"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept2"[color="brown",fontcolor="black",label="edm:hasType"];
+}

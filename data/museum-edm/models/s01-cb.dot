@@ -1,0 +1,24 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"attribution"[shape="plaintext",style="filled",fillcolor="gold",label="attribution"];
+"beginDate"[shape="plaintext",style="filled",fillcolor="gold",label="beginDate"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"dated"[shape="plaintext",style="filled",fillcolor="gold",label="dated"];
+"medium"[shape="plaintext",style="filled",fillcolor="gold",label="medium"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+}
+"aac-ont:Person1" -> "attribution"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "beginDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:CulturalHeritageObject1" -> "dated"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "medium"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+}

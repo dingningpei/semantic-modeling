@@ -1,0 +1,82 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"artWork_artworkTitle"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_artworkTitle"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"artWork_artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_artistName"];
+"artWork_nationality"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_nationality"];
+"aac-ont:Place1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place1"];
+"artWork_birthPlace"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_birthPlace"];
+"artWork_birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_birthDate"];
+"artWork_deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_deathDate"];
+"aac-ont:Place2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place2"];
+"artWork_deathPlace"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_deathPlace"];
+"artWork_dateOfEndOfCreation"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_dateOfEndOfCreation"];
+"artWork_medium"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_medium"];
+"artWork_dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_dimensions"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"artWork_classification"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_classification"];
+"artWork_creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_creditLine"];
+"artWork_accessionNumber"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_accessionNumber"];
+"artWork_provenance"[shape="plaintext",style="filled",fillcolor="gold",label="artWork_provenance"];
+"aac-ont:CulturalHeritageObject2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject2"];
+"relatedArtWork_artworkTitle"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_artworkTitle"];
+"aac-ont:Person2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person2"];
+"relatedArtWork_artistName"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_artistName"];
+"relatedArtWork_nationality"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_nationality"];
+"aac-ont:Place3"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place3"];
+"relatedArtWork_birthPlace"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_birthPlace"];
+"relatedArtWork_birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_birthDate"];
+"relatedArtWork_deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_deathDate"];
+"aac-ont:Place4"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place4"];
+"relatedArtWork_deathPlace"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_deathPlace"];
+"relatedArtWork_dateOfEndOfCreation"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_dateOfEndOfCreation"];
+"relatedArtWork_medium"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_medium"];
+"relatedArtWork_dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_dimensions"];
+"skos:Concept2"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept2"];
+"relatedArtWork_classification"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_classification"];
+"relatedArtWork_creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_creditLine"];
+"relatedArtWork_accessionNumber"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_accessionNumber"];
+"relatedArtWork_provenance"[shape="plaintext",style="filled",fillcolor="gold",label="relatedArtWork_provenance"];
+}
+"aac-ont:CulturalHeritageObject1" -> "artWork_artworkTitle"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:Person1" -> "artWork_artistName"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "artWork_nationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:Place1" -> "artWork_birthPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:Person1" -> "artWork_birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "artWork_deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Place2" -> "artWork_deathPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_dateOfEndOfCreation"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_medium"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"skos:Concept1" -> "artWork_classification"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_creditLine"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_accessionNumber"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:CulturalHeritageObject1" -> "artWork_provenance"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_artworkTitle"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:Person2" -> "relatedArtWork_artistName"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person2" -> "relatedArtWork_nationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:Place3" -> "relatedArtWork_birthPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:Person2" -> "relatedArtWork_birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person2" -> "relatedArtWork_deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Place4" -> "relatedArtWork_deathPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_dateOfEndOfCreation"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_medium"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"skos:Concept2" -> "relatedArtWork_classification"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_creditLine"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_accessionNumber"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:CulturalHeritageObject2" -> "relatedArtWork_provenance"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="edm:hasType"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:CulturalHeritageObject2"[color="brown",fontcolor="black",label="edm:isRelatedTo"];
+"aac-ont:Person1" -> "aac-ont:Place1"[color="brown",fontcolor="black",label="ElementsGr2:placeOfBirth"];
+"aac-ont:Person1" -> "aac-ont:Place2"[color="brown",fontcolor="black",label="ElementsGr2:placeOfDeath"];
+"aac-ont:CulturalHeritageObject2" -> "aac-ont:Person2"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject2" -> "skos:Concept2"[color="brown",fontcolor="black",label="edm:hasType"];
+"aac-ont:Person2" -> "aac-ont:Place3"[color="brown",fontcolor="black",label="ElementsGr2:placeOfBirth"];
+"aac-ont:Person2" -> "aac-ont:Place4"[color="brown",fontcolor="black",label="ElementsGr2:placeOfDeath"];
+}

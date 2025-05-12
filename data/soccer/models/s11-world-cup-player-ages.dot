@@ -1,0 +1,20 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"Age"[shape="plaintext",style="filled",fillcolor="gold",label="Age"];
+"Number"[shape="plaintext",style="filled",fillcolor="gold",label="Number"];
+"Position"[shape="plaintext",style="filled",fillcolor="gold",label="Position"];
+"Player"[shape="plaintext",style="filled",fillcolor="gold",label="Player"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"Country"[shape="plaintext",style="filled",fillcolor="gold",label="Country"];
+}
+"schema:Player1" -> "Age"[color="brown",fontcolor="black",label="schema:age"];
+"schema:Player1" -> "Number"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "Position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "Player"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsTeam1" -> "Country"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+}

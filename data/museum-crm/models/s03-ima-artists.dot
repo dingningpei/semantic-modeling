@@ -1,0 +1,36 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"name"[shape="plaintext",style="filled",fillcolor="gold",label="name"];
+"crm:E74_Group1"[style="filled",color="white",fillcolor="lightgray",label="crm:E74_Group1"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"crm:E52_Time-Span2"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span2"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+"crm:E67_Birth1"[style="filled",color="white",fillcolor="lightgray",label="crm:E67_Birth1"];
+"crm:E69_Death1"[style="filled",color="white",fillcolor="lightgray",label="crm:E69_Death1"];
+}
+"crm:E35_Title1" -> "title"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E82_Actor_Appellation1" -> "name"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E74_Group1" -> "nationality"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span1" -> "birthDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E52_Time-Span2" -> "deathDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E21_Person1" -> "crm:E67_Birth1"[color="brown",fontcolor="black",label="crm:P98i_was_born"];
+"crm:E21_Person1" -> "crm:E69_Death1"[color="brown",fontcolor="black",label="crm:P100i_died_in"];
+"crm:E21_Person1" -> "crm:E74_Group1"[color="brown",fontcolor="black",label="crm:P107i_is_current_or_former_member_of"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+"crm:E67_Birth1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E69_Death1" -> "crm:E52_Time-Span2"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+}

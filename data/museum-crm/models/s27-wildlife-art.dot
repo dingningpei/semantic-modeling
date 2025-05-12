@@ -1,0 +1,70 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E55_Type1"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type1"];
+"category"[shape="plaintext",style="filled",fillcolor="gold",label="category"];
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"maker"[shape="plaintext",style="filled",fillcolor="gold",label="maker"];
+"crm:E74_Group1"[style="filled",color="white",fillcolor="lightgray",label="crm:E74_Group1"];
+"makerBioCountry"[shape="plaintext",style="filled",fillcolor="gold",label="makerBioCountry"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"crm:E52_Time-Span2"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span2"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"crm:E33_Linguistic_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E33_Linguistic_Object1"];
+"collector"[shape="plaintext",style="filled",fillcolor="gold",label="collector"];
+"crm:E48_Place_Name1"[style="filled",color="white",fillcolor="lightgray",label="crm:E48_Place_Name1"];
+"placeMade"[shape="plaintext",style="filled",fillcolor="gold",label="placeMade"];
+"crm:E55_Type2"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type2"];
+"materials"[shape="plaintext",style="filled",fillcolor="gold",label="materials"];
+"crm:E54_Dimension1"[style="filled",color="white",fillcolor="lightgray",label="crm:E54_Dimension1"];
+"measurements"[shape="plaintext",style="filled",fillcolor="gold",label="measurements"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"crm:E8_Acquisition1"[style="filled",color="white",fillcolor="lightgray",label="crm:E8_Acquisition1"];
+"creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="creditLine"];
+"crm:E40_Legal_Body1"[style="filled",color="white",fillcolor="lightgray",label="crm:E40_Legal_Body1"];
+"owner"[shape="plaintext",style="filled",fillcolor="gold",label="owner"];
+"howAcquired"[shape="plaintext",style="filled",fillcolor="gold",label="howAcquired"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+"crm:E53_Place1"[style="filled",color="white",fillcolor="lightgray",label="crm:E53_Place1"];
+"crm:E67_Birth1"[style="filled",color="white",fillcolor="lightgray",label="crm:E67_Birth1"];
+"crm:E69_Death1"[style="filled",color="white",fillcolor="lightgray",label="crm:E69_Death1"];
+}
+"crm:E55_Type1" -> "category"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E35_Title1" -> "title"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E82_Actor_Appellation1" -> "maker"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E74_Group1" -> "makerBioCountry"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span1" -> "birthDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E52_Time-Span2" -> "deathDate"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E33_Linguistic_Object1" -> "collector"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E48_Place_Name1" -> "placeMade"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E55_Type2" -> "materials"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E54_Dimension1" -> "measurements"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E22_Man-Made_Object1" -> "description"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E8_Acquisition1" -> "creditLine"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E40_Legal_Body1" -> "owner"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E8_Acquisition1" -> "howAcquired"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E33_Linguistic_Object1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P129_is_about"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E22_Man-Made_Object1" -> "crm:E8_Acquisition1"[color="brown",fontcolor="black",label="crm:P24i_changed_ownership_through"];
+"crm:E22_Man-Made_Object1" -> "crm:E55_Type1"[color="brown",fontcolor="black",label="crm:P2_has_type"];
+"crm:E22_Man-Made_Object1" -> "crm:E54_Dimension1"[color="brown",fontcolor="black",label="crm:P43_has_dimension"];
+"crm:E22_Man-Made_Object1" -> "crm:E40_Legal_Body1"[color="brown",fontcolor="black",label="crm:P51_has_former_or_current_owner"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E12_Production1" -> "crm:E55_Type2"[color="brown",fontcolor="black",label="crm:P32_used_general_technique"];
+"crm:E12_Production1" -> "crm:E53_Place1"[color="brown",fontcolor="black",label="crm:P7_took_place_at"];
+"crm:E21_Person1" -> "crm:E67_Birth1"[color="brown",fontcolor="black",label="crm:P98i_was_born"];
+"crm:E21_Person1" -> "crm:E69_Death1"[color="brown",fontcolor="black",label="crm:P100i_died_in"];
+"crm:E21_Person1" -> "crm:E74_Group1"[color="brown",fontcolor="black",label="crm:P107i_is_current_or_former_member_of"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+"crm:E67_Birth1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E69_Death1" -> "crm:E52_Time-Span2"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E53_Place1" -> "crm:E48_Place_Name1"[color="brown",fontcolor="black",label="crm:P87_is_identified_by"];
+}

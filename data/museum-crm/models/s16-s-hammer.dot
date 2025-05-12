@@ -1,0 +1,34 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E78_Collection1"[style="filled",color="white",fillcolor="lightgray",label="crm:E78_Collection1"];
+"name"[shape="plaintext",style="filled",fillcolor="gold",label="name"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"artist"[shape="plaintext",style="filled",fillcolor="gold",label="artist"];
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"year"[shape="plaintext",style="filled",fillcolor="gold",label="year"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"crm:E38_Image1"[style="filled",color="white",fillcolor="lightgray",label="crm:E38_Image1"];
+"image"[shape="plaintext",style="filled",fillcolor="gold",label="image"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+}
+"crm:E78_Collection1" -> "name"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E82_Actor_Appellation1" -> "artist"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E35_Title1" -> "title"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span1" -> "year"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E22_Man-Made_Object1" -> "description"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E38_Image1" -> "image"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E38_Image1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P138_represents"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E22_Man-Made_Object1" -> "crm:E78_Collection1"[color="brown",fontcolor="black",label="crm:P46i_forms_part_of"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E12_Production1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+}

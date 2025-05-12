@@ -1,0 +1,26 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artistName"];
+"crm:E74_Group1"[style="filled",color="white",fillcolor="lightgray",label="crm:E74_Group1"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"crm:E33_Linguistic_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E33_Linguistic_Object1"];
+"birthDataAndPlace"[shape="plaintext",style="filled",fillcolor="gold",label="birthDataAndPlace"];
+"crm:E39_Actor1"[style="filled",color="white",fillcolor="lightgray",label="crm:E39_Actor1"];
+"longBiography"[shape="plaintext",style="filled",fillcolor="gold",label="longBiography"];
+"crm:E33_Linguistic_Object2"[style="filled",color="white",fillcolor="lightgray",label="crm:E33_Linguistic_Object2"];
+"occupation"[shape="plaintext",style="filled",fillcolor="gold",label="occupation"];
+}
+"crm:E82_Actor_Appellation1" -> "artistName"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E74_Group1" -> "nationality"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E33_Linguistic_Object1" -> "birthDataAndPlace"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E39_Actor1" -> "longBiography"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E33_Linguistic_Object2" -> "occupation"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E33_Linguistic_Object1" -> "crm:E39_Actor1"[color="brown",fontcolor="black",label="crm:P129_is_about"];
+"crm:E33_Linguistic_Object2" -> "crm:E39_Actor1"[color="brown",fontcolor="black",label="crm:P129_is_about"];
+"crm:E39_Actor1" -> "crm:E74_Group1"[color="brown",fontcolor="black",label="crm:P107i_is_current_or_former_member_of"];
+"crm:E39_Actor1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+}

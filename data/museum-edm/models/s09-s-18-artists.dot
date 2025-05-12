@@ -1,0 +1,16 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"name"[shape="plaintext",style="filled",fillcolor="gold",label="name"];
+"biography"[shape="plaintext",style="filled",fillcolor="gold",label="biography"];
+}
+"aac-ont:Person1" -> "birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Person1" -> "name"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "biography"[color="brown",fontcolor="black",label="ElementsGr2:biographicalInformation"];
+}

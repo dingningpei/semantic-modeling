@@ -1,0 +1,30 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E31_Document1"[style="filled",color="white",fillcolor="lightgray",label="crm:E31_Document1"];
+"video"[shape="plaintext",style="filled",fillcolor="gold",label="video"];
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"author"[shape="plaintext",style="filled",fillcolor="gold",label="author"];
+"crm:E38_Image1"[style="filled",color="white",fillcolor="lightgray",label="crm:E38_Image1"];
+"imageSRC"[shape="plaintext",style="filled",fillcolor="gold",label="imageSRC"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+}
+"crm:E31_Document1" -> "video"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E35_Title1" -> "title"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E82_Actor_Appellation1" -> "author"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E38_Image1" -> "imageSRC"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E22_Man-Made_Object1" -> "description"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E38_Image1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P138_represents"];
+"crm:E31_Document1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P70_documents"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+}

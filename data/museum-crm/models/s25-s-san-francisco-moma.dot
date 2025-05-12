@@ -1,0 +1,68 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"crm:E38_Image1"[style="filled",color="white",fillcolor="lightgray",label="crm:E38_Image1"];
+"imageURL"[shape="plaintext",style="filled",fillcolor="gold",label="imageURL"];
+"crm:E78_Collection1"[style="filled",color="white",fillcolor="lightgray",label="crm:E78_Collection1"];
+"collection"[shape="plaintext",style="filled",fillcolor="gold",label="collection"];
+"crm:E55_Type1"[style="filled",color="white",fillcolor="lightgray",label="crm:E55_Type1"];
+"type"[shape="plaintext",style="filled",fillcolor="gold",label="type"];
+"crm:E22_Man-Made_Object1"[style="filled",color="white",fillcolor="lightgray",label="crm:E22_Man-Made_Object1"];
+"url"[shape="plaintext",style="filled",fillcolor="gold",label="url"];
+"crm:E35_Title1"[style="filled",color="white",fillcolor="lightgray",label="crm:E35_Title1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"crm:E52_Time-Span3"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span3"];
+"when-acquired"[shape="plaintext",style="filled",fillcolor="gold",label="when-acquired"];
+"crm:E54_Dimension1"[style="filled",color="white",fillcolor="lightgray",label="crm:E54_Dimension1"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+"crm:E8_Acquisition1"[style="filled",color="white",fillcolor="lightgray",label="crm:E8_Acquisition1"];
+"credit"[shape="plaintext",style="filled",fillcolor="gold",label="credit"];
+"crm:E82_Actor_Appellation1"[style="filled",color="white",fillcolor="lightgray",label="crm:E82_Actor_Appellation1"];
+"artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artistName"];
+"crm:E74_Group1"[style="filled",color="white",fillcolor="lightgray",label="crm:E74_Group1"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"crm:E52_Time-Span1"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span1"];
+"birthYear"[shape="plaintext",style="filled",fillcolor="gold",label="birthYear"];
+"crm:E52_Time-Span2"[style="filled",color="white",fillcolor="lightgray",label="crm:E52_Time-Span2"];
+"deathYear"[shape="plaintext",style="filled",fillcolor="gold",label="deathYear"];
+"crm:E48_Place_Name1"[style="filled",color="white",fillcolor="lightgray",label="crm:E48_Place_Name1"];
+"birthPlace"[shape="plaintext",style="filled",fillcolor="gold",label="birthPlace"];
+"crm:E12_Production1"[style="filled",color="white",fillcolor="lightgray",label="crm:E12_Production1"];
+"crm:E21_Person1"[style="filled",color="white",fillcolor="lightgray",label="crm:E21_Person1"];
+"crm:E67_Birth1"[style="filled",color="white",fillcolor="lightgray",label="crm:E67_Birth1"];
+"crm:E69_Death1"[style="filled",color="white",fillcolor="lightgray",label="crm:E69_Death1"];
+"crm:E53_Place1"[style="filled",color="white",fillcolor="lightgray",label="crm:E53_Place1"];
+}
+"crm:E38_Image1" -> "imageURL"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E78_Collection1" -> "collection"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E55_Type1" -> "type"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E22_Man-Made_Object1" -> "url"[color="brown",fontcolor="black",label="karma:classLink"];
+"crm:E35_Title1" -> "title"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span3" -> "when-acquired"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E54_Dimension1" -> "dimensions"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E8_Acquisition1" -> "credit"[color="brown",fontcolor="black",label="crm:P3_has_note"];
+"crm:E82_Actor_Appellation1" -> "artistName"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E74_Group1" -> "nationality"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E52_Time-Span1" -> "birthYear"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E52_Time-Span2" -> "deathYear"[color="brown",fontcolor="black",label="crm:P82_at_some_time_within"];
+"crm:E48_Place_Name1" -> "birthPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"crm:E38_Image1" -> "crm:E22_Man-Made_Object1"[color="brown",fontcolor="black",label="crm:P138_represents"];
+"crm:E22_Man-Made_Object1" -> "crm:E12_Production1"[color="brown",fontcolor="black",label="crm:P108i_was_produced_by"];
+"crm:E22_Man-Made_Object1" -> "crm:E35_Title1"[color="brown",fontcolor="black",label="crm:P102_has_title"];
+"crm:E22_Man-Made_Object1" -> "crm:E55_Type1"[color="brown",fontcolor="black",label="crm:P2_has_type"];
+"crm:E22_Man-Made_Object1" -> "crm:E8_Acquisition1"[color="brown",fontcolor="black",label="crm:P24i_changed_ownership_through"];
+"crm:E22_Man-Made_Object1" -> "crm:E54_Dimension1"[color="brown",fontcolor="black",label="crm:P43_has_dimension"];
+"crm:E22_Man-Made_Object1" -> "crm:E78_Collection1"[color="brown",fontcolor="black",label="crm:P46i_forms_part_of"];
+"crm:E12_Production1" -> "crm:E21_Person1"[color="brown",fontcolor="black",label="crm:P14_carried_out_by"];
+"crm:E12_Production1" -> "crm:E52_Time-Span3"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E21_Person1" -> "crm:E82_Actor_Appellation1"[color="brown",fontcolor="black",label="crm:P131_is_identified_by"];
+"crm:E21_Person1" -> "crm:E67_Birth1"[color="brown",fontcolor="black",label="crm:P98i_was_born"];
+"crm:E21_Person1" -> "crm:E69_Death1"[color="brown",fontcolor="black",label="crm:P100i_died_in"];
+"crm:E21_Person1" -> "crm:E74_Group1"[color="brown",fontcolor="black",label="crm:P107i_is_current_or_former_member_of"];
+"crm:E67_Birth1" -> "crm:E52_Time-Span1"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E69_Death1" -> "crm:E52_Time-Span2"[color="brown",fontcolor="black",label="crm:P4_has_time-span"];
+"crm:E67_Birth1" -> "crm:E53_Place1"[color="brown",fontcolor="black",label="crm:P7_took_place_at"];
+"crm:E53_Place1" -> "crm:E48_Place_Name1"[color="brown",fontcolor="black",label="crm:P87_is_identified_by"];
+}

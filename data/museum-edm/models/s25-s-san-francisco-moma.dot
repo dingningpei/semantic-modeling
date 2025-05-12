@@ -1,0 +1,50 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"accession-id"[shape="plaintext",style="filled",fillcolor="gold",label="accession-id"];
+"edm:WebResource1"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource1"];
+"imageURL"[shape="plaintext",style="filled",fillcolor="gold",label="imageURL"];
+"copyright"[shape="plaintext",style="filled",fillcolor="gold",label="copyright"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"type"[shape="plaintext",style="filled",fillcolor="gold",label="type"];
+"foaf:Document1"[style="filled",color="white",fillcolor="lightgray",label="foaf:Document1"];
+"url"[shape="plaintext",style="filled",fillcolor="gold",label="url"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"dimensions"[shape="plaintext",style="filled",fillcolor="gold",label="dimensions"];
+"credit"[shape="plaintext",style="filled",fillcolor="gold",label="credit"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"artistName"[shape="plaintext",style="filled",fillcolor="gold",label="artistName"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"birthYear"[shape="plaintext",style="filled",fillcolor="gold",label="birthYear"];
+"deathYear"[shape="plaintext",style="filled",fillcolor="gold",label="deathYear"];
+"aac-ont:Place1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place1"];
+"birthPlace"[shape="plaintext",style="filled",fillcolor="gold",label="birthPlace"];
+"aac-ont:Place2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place2"];
+"deathPlace"[shape="plaintext",style="filled",fillcolor="gold",label="deathPlace"];
+"edm:EuropeanaAggregation1"[style="filled",color="white",fillcolor="lightgray",label="edm:EuropeanaAggregation1"];
+}
+"aac-ont:CulturalHeritageObject1" -> "accession-id"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"edm:WebResource1" -> "imageURL"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject1" -> "copyright"[color="brown",fontcolor="black",label="dcterms:rightsHolder"];
+"skos:Concept1" -> "type"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"foaf:Document1" -> "url"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:CulturalHeritageObject1" -> "dimensions"[color="brown",fontcolor="black",label="dcterms:extent"];
+"aac-ont:CulturalHeritageObject1" -> "credit"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:Person1" -> "artistName"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "nationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:Person1" -> "birthYear"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathYear"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Place1" -> "birthPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:Place2" -> "deathPlace"[color="brown",fontcolor="black",label="rdfs:label"];
+"edm:EuropeanaAggregation1" -> "aac-ont:CulturalHeritageObject1"[color="brown",fontcolor="black",label="edm:aggregatedCHO"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource1"[color="brown",fontcolor="black",label="edm:hasView"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="edm:hasType"];
+"aac-ont:CulturalHeritageObject1" -> "foaf:Document1"[color="brown",fontcolor="black",label="foaf:page"];
+"aac-ont:Person1" -> "aac-ont:Place1"[color="brown",fontcolor="black",label="ElementsGr2:placeOfBirth"];
+"aac-ont:Person1" -> "aac-ont:Place2"[color="brown",fontcolor="black",label="ElementsGr2:placeOfDeath"];
+}

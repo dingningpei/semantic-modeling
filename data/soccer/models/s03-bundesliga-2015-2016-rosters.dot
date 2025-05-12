@@ -1,0 +1,24 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"Name"[shape="plaintext",style="filled",fillcolor="gold",label="Name"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"Club"[shape="plaintext",style="filled",fillcolor="gold",label="Club"];
+"schema:SportsTeam1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsTeam1"];
+"Country"[shape="plaintext",style="filled",fillcolor="gold",label="Country"];
+"Tag"[shape="plaintext",style="filled",fillcolor="gold",label="Tag"];
+"Birthdate"[shape="plaintext",style="filled",fillcolor="gold",label="Birthdate"];
+"Position"[shape="plaintext",style="filled",fillcolor="gold",label="Position"];
+}
+"schema:Player1" -> "Name"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsClub1" -> "Club"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsTeam1" -> "Country"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "Tag"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "Birthdate"[color="brown",fontcolor="black",label="schema:birthDate"];
+"schema:Player1" -> "Position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "schema:SportsTeam1"[color="brown",fontcolor="black",label="schema:inNationalTeam"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+}

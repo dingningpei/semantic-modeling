@@ -1,0 +1,20 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"name"[shape="plaintext",style="filled",fillcolor="gold",label="name"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+}
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:Person1" -> "name"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "nationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:Person1" -> "birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+}

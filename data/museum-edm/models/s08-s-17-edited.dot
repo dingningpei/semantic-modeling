@@ -1,0 +1,28 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"edm:WebResource2"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource2"];
+"video"[shape="plaintext",style="filled",fillcolor="gold",label="video"];
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"author"[shape="plaintext",style="filled",fillcolor="gold",label="author"];
+"edm:WebResource1"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource1"];
+"imageSRC"[shape="plaintext",style="filled",fillcolor="gold",label="imageSRC"];
+"caption"[shape="plaintext",style="filled",fillcolor="gold",label="caption"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"edm:EuropeanaAggregation1"[style="filled",color="white",fillcolor="lightgray",label="edm:EuropeanaAggregation1"];
+}
+"edm:WebResource2" -> "video"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:Person1" -> "author"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"edm:WebResource1" -> "imageSRC"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject1" -> "caption"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "description"[color="brown",fontcolor="black",label="dcterms:description"];
+"edm:EuropeanaAggregation1" -> "aac-ont:CulturalHeritageObject1"[color="brown",fontcolor="black",label="edm:aggregatedCHO"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource1"[color="brown",fontcolor="black",label="edm:hasView"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource2"[color="brown",fontcolor="black",label="edm:hasView"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+}

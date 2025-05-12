@@ -1,0 +1,34 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"access"[shape="plaintext",style="filled",fillcolor="gold",label="access"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"artist"[shape="plaintext",style="filled",fillcolor="gold",label="artist"];
+"nationality"[shape="plaintext",style="filled",fillcolor="gold",label="nationality"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"made"[shape="plaintext",style="filled",fillcolor="gold",label="made"];
+"prov"[shape="plaintext",style="filled",fillcolor="gold",label="prov"];
+"dim"[shape="plaintext",style="filled",fillcolor="gold",label="dim"];
+"edm:WebResource1"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource1"];
+"imageURL"[shape="plaintext",style="filled",fillcolor="gold",label="imageURL"];
+"edm:EuropeanaAggregation1"[style="filled",color="white",fillcolor="lightgray",label="edm:EuropeanaAggregation1"];
+}
+"aac-ont:CulturalHeritageObject1" -> "access"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:Person1" -> "artist"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "nationality"[color="brown",fontcolor="black",label="ElementsGr2:countryAssociatedWithThePerson"];
+"aac-ont:Person1" -> "birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:CulturalHeritageObject1" -> "made"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "prov"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "dim"[color="brown",fontcolor="black",label="dcterms:extent"];
+"edm:WebResource1" -> "imageURL"[color="brown",fontcolor="black",label="karma:classLink"];
+"edm:EuropeanaAggregation1" -> "aac-ont:CulturalHeritageObject1"[color="brown",fontcolor="black",label="edm:aggregatedCHO"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource1"[color="brown",fontcolor="black",label="edm:hasView"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+}

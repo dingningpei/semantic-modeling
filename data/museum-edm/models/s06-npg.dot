@@ -1,0 +1,56 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"copyRight"[shape="plaintext",style="filled",fillcolor="gold",label="copyRight"];
+"skos:Concept2"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept2"];
+"classification"[shape="plaintext",style="filled",fillcolor="gold",label="classification"];
+"medium"[shape="plaintext",style="filled",fillcolor="gold",label="medium"];
+"dimension"[shape="plaintext",style="filled",fillcolor="gold",label="dimension"];
+"owner"[shape="plaintext",style="filled",fillcolor="gold",label="owner"];
+"edm:WebResource1"[style="filled",color="white",fillcolor="lightgray",label="edm:WebResource1"];
+"image"[shape="plaintext",style="filled",fillcolor="gold",label="image"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"dateOfWork"[shape="plaintext",style="filled",fillcolor="gold",label="dateOfWork"];
+"creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="creditLine"];
+"Ref"[shape="plaintext",style="filled",fillcolor="gold",label="Ref"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"artist"[shape="plaintext",style="filled",fillcolor="gold",label="artist"];
+"artistBornDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistBornDate"];
+"artistDiedDate"[shape="plaintext",style="filled",fillcolor="gold",label="artistDiedDate"];
+"aac-ont:Person2"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person2"];
+"sitter"[shape="plaintext",style="filled",fillcolor="gold",label="sitter"];
+"sitterBornDate"[shape="plaintext",style="filled",fillcolor="gold",label="sitterBornDate"];
+"sitterDiedDate"[shape="plaintext",style="filled",fillcolor="gold",label="sitterDiedDate"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"keywords"[shape="plaintext",style="filled",fillcolor="gold",label="keywords"];
+"edm:EuropeanaAggregation1"[style="filled",color="white",fillcolor="lightgray",label="edm:EuropeanaAggregation1"];
+}
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:CulturalHeritageObject1" -> "copyRight"[color="brown",fontcolor="black",label="dc:rights"];
+"skos:Concept2" -> "classification"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "medium"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "dimension"[color="brown",fontcolor="black",label="dcterms:extent"];
+"aac-ont:CulturalHeritageObject1" -> "owner"[color="brown",fontcolor="black",label="dcterms:rightsHolder"];
+"edm:WebResource1" -> "image"[color="brown",fontcolor="black",label="karma:classLink"];
+"aac-ont:CulturalHeritageObject1" -> "description"[color="brown",fontcolor="black",label="dcterms:description"];
+"aac-ont:CulturalHeritageObject1" -> "dateOfWork"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "creditLine"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "Ref"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"aac-ont:Person1" -> "artist"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "artistBornDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "artistDiedDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Person2" -> "sitter"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person2" -> "sitterBornDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person2" -> "sitterDiedDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"skos:Concept1" -> "keywords"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"edm:EuropeanaAggregation1" -> "aac-ont:CulturalHeritageObject1"[color="brown",fontcolor="black",label="edm:aggregatedCHO"];
+"edm:EuropeanaAggregation1" -> "edm:WebResource1"[color="brown",fontcolor="black",label="edm:hasView"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person2"[color="brown",fontcolor="black",label="aac-ont:sitter"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept2"[color="brown",fontcolor="black",label="edm:hasType"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="dcterms:subject"];
+}

@@ -1,0 +1,46 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"aac-ont:CulturalHeritageObject1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:CulturalHeritageObject1"];
+"idNumber"[shape="plaintext",style="filled",fillcolor="gold",label="idNumber"];
+"skos:Concept2"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept2"];
+"category"[shape="plaintext",style="filled",fillcolor="gold",label="category"];
+"title"[shape="plaintext",style="filled",fillcolor="gold",label="title"];
+"aac-ont:Person1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Person1"];
+"maker"[shape="plaintext",style="filled",fillcolor="gold",label="maker"];
+"makerBioCountry"[shape="plaintext",style="filled",fillcolor="gold",label="makerBioCountry"];
+"birthDate"[shape="plaintext",style="filled",fillcolor="gold",label="birthDate"];
+"deathDate"[shape="plaintext",style="filled",fillcolor="gold",label="deathDate"];
+"aac-ont:Place1"[style="filled",color="white",fillcolor="lightgray",label="aac-ont:Place1"];
+"placeMade"[shape="plaintext",style="filled",fillcolor="gold",label="placeMade"];
+"materials"[shape="plaintext",style="filled",fillcolor="gold",label="materials"];
+"measurements"[shape="plaintext",style="filled",fillcolor="gold",label="measurements"];
+"description"[shape="plaintext",style="filled",fillcolor="gold",label="description"];
+"creditLine"[shape="plaintext",style="filled",fillcolor="gold",label="creditLine"];
+"owner"[shape="plaintext",style="filled",fillcolor="gold",label="owner"];
+"skos:Concept1"[style="filled",color="white",fillcolor="lightgray",label="skos:Concept1"];
+"option"[shape="plaintext",style="filled",fillcolor="gold",label="option"];
+"createDate"[shape="plaintext",style="filled",fillcolor="gold",label="createDate"];
+}
+"aac-ont:CulturalHeritageObject1" -> "idNumber"[color="brown",fontcolor="black",label="aac-ont:accessionNumber"];
+"skos:Concept2" -> "category"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "title"[color="brown",fontcolor="black",label="dcterms:title"];
+"aac-ont:Person1" -> "maker"[color="brown",fontcolor="black",label="ElementsGr2:nameOfThePerson"];
+"aac-ont:Person1" -> "makerBioCountry"[color="brown",fontcolor="black",label="ElementsGr2:biographicalInformation"];
+"aac-ont:Person1" -> "birthDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfBirth"];
+"aac-ont:Person1" -> "deathDate"[color="brown",fontcolor="black",label="ElementsGr2:dateOfDeath"];
+"aac-ont:Place1" -> "placeMade"[color="brown",fontcolor="black",label="rdfs:label"];
+"aac-ont:CulturalHeritageObject1" -> "materials"[color="brown",fontcolor="black",label="dcterms:medium"];
+"aac-ont:CulturalHeritageObject1" -> "measurements"[color="brown",fontcolor="black",label="dcterms:extent"];
+"aac-ont:CulturalHeritageObject1" -> "description"[color="brown",fontcolor="black",label="dcterms:description"];
+"aac-ont:CulturalHeritageObject1" -> "creditLine"[color="brown",fontcolor="black",label="dcterms:provenance"];
+"aac-ont:CulturalHeritageObject1" -> "owner"[color="brown",fontcolor="black",label="dcterms:rightsHolder"];
+"skos:Concept1" -> "option"[color="brown",fontcolor="black",label="skos:prefLabel"];
+"aac-ont:CulturalHeritageObject1" -> "createDate"[color="brown",fontcolor="black",label="dcterms:created"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Person1"[color="brown",fontcolor="black",label="dcterms:creator"];
+"aac-ont:CulturalHeritageObject1" -> "aac-ont:Place1"[color="brown",fontcolor="black",label="aac-ont:associatedPlace"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept1"[color="brown",fontcolor="black",label="dcterms:subject"];
+"aac-ont:CulturalHeritageObject1" -> "skos:Concept2"[color="brown",fontcolor="black",label="edm:hasType"];
+}

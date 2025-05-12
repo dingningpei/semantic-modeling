@@ -1,0 +1,26 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"playerNum"[shape="plaintext",style="filled",fillcolor="gold",label="playerNum"];
+"position"[shape="plaintext",style="filled",fillcolor="gold",label="position"];
+"playerName"[shape="plaintext",style="filled",fillcolor="gold",label="playerName"];
+"schema:SportsClub1"[style="filled",color="white",fillcolor="lightgray",label="schema:SportsClub1"];
+"club"[shape="plaintext",style="filled",fillcolor="gold",label="club"];
+"age"[shape="plaintext",style="filled",fillcolor="gold",label="age"];
+"height"[shape="plaintext",style="filled",fillcolor="gold",label="height"];
+"weight"[shape="plaintext",style="filled",fillcolor="gold",label="weight"];
+"birthplace"[shape="plaintext",style="filled",fillcolor="gold",label="birthplace"];
+}
+"schema:Player1" -> "playerNum"[color="brown",fontcolor="black",label="schema:tag"];
+"schema:Player1" -> "position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "playerName"[color="brown",fontcolor="black",label="schema:name"];
+"schema:SportsClub1" -> "club"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "age"[color="brown",fontcolor="black",label="schema:age"];
+"schema:Player1" -> "height"[color="brown",fontcolor="black",label="schema:height"];
+"schema:Player1" -> "weight"[color="brown",fontcolor="black",label="schema:weight"];
+"schema:Player1" -> "birthplace"[color="brown",fontcolor="black",label="schema:birthPlace"];
+"schema:Player1" -> "schema:SportsClub1"[color="brown",fontcolor="black",label="schema:inClub"];
+}

@@ -1,0 +1,16 @@
+digraph n0 {
+fontcolor="blue"
+remincross="true"
+subgraph cluster {
+label="model"
+"schema:Player1"[style="filled",color="white",fillcolor="lightgray",label="schema:Player1"];
+"name"[shape="plaintext",style="filled",fillcolor="gold",label="name"];
+"foot"[shape="plaintext",style="filled",fillcolor="gold",label="foot"];
+"position"[shape="plaintext",style="filled",fillcolor="gold",label="position"];
+"height"[shape="plaintext",style="filled",fillcolor="gold",label="height"];
+}
+"schema:Player1" -> "name"[color="brown",fontcolor="black",label="schema:name"];
+"schema:Player1" -> "foot"[color="brown",fontcolor="black",label="schema:strongFoot"];
+"schema:Player1" -> "position"[color="brown",fontcolor="black",label="schema:playPosition"];
+"schema:Player1" -> "height"[color="brown",fontcolor="black",label="schema:height"];
+}
